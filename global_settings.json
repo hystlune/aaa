@@ -1,0 +1,170 @@
+{
+    // ────────────── 原有设置 ──────────────
+    "terminal.integrated.commandsToSkipShell": [
+        "matlab.interrupt"
+    ],
+    "python.defaultInterpreterPath": "C:\\Users\\yue\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+    
+    // ────────────── ⑥ Copilot Chat / Agent Mode ──────────────
+    "github.copilot.agent.enabled": true,
+    "chat.tools.autoApprove": true,
+    
+    // ────────────── GitHub Copilot 核心设置 ──────────────
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": true,
+        "markdown": true,
+        "scminput": false
+    },
+    "github.copilot.editor.enableAutoCompletions": true,
+    "github.copilot.editor.enableCodeActions": true,
+    "github.copilot.chat.enabled": true,
+    "github.copilot.chat.welcomeMessage": "always",
+    "github.copilot.chat.localeOverride": "zh-cn",
+    
+    // ────────────── Copilot 高级功能 ──────────────
+    "github.copilot.advanced": {
+        "secret_key": "github.copilot.advanced",
+        "length": 500,
+        "temperature": "",
+        "top_p": "",
+        "stop": {
+            "*": [
+                "\n\n\n"
+            ],
+            "python": [
+                "\ndef ",
+                "\nclass ",
+                "\nif ",
+                "\n\n#"
+            ]
+        }
+    },
+    
+    // ────────────── 编辑器增强设置 ──────────────
+    "editor.inlineSuggest.enabled": true,
+    "editor.inlineSuggest.suppressSuggestions": false,
+    "editor.suggestOnTriggerCharacters": true,
+    "editor.acceptSuggestionOnCommitCharacter": true,
+    "editor.acceptSuggestionOnEnter": "on",
+    "editor.quickSuggestions": {
+        "other": "on",
+        "comments": "on",
+        "strings": "on"
+    },
+    "editor.wordBasedSuggestions": "matchingDocuments",
+    "editor.parameterHints.enabled": true,
+    "editor.suggest.insertMode": "insert",
+    "editor.tabCompletion": "on",
+    "editor.snippetSuggestions": "top",
+    
+    // ────────────── 聊天和AI助手设置 ──────────────
+    "chat.experimental.defaultAgent": "copilot",
+    "chat.editor.wordWrap": "on",
+    "accessibility.signals.chatRequestSent": {
+        "sound": "on"
+    },
+    "accessibility.signals.chatResponseReceived": {
+        "sound": "on"
+    },
+    
+    // ────────────── 工作区增强设置 ──────────────
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.revealIfOpen": true,
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.commandPalette.history": 50,
+    "workbench.quickOpen.closeOnFocusLost": false,
+    "workbench.iconTheme": "vs-seti",
+    "workbench.colorTheme": "Default Dark+",
+    
+    // ────────────── 文件和搜索优化 ──────────────
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 1000,
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/node_modules": true,
+        "**/*.pyc": true,
+        "**/__pycache__": true
+    },
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/bower_components": true,
+        "**/*.code-search": true,
+        "**/dist": true,
+        "**/build": true
+    },
+    "search.smartCase": true,
+    "search.useGlobalIgnoreFiles": true,
+    "search.useParentIgnoreFiles": true,
+    
+    // ────────────── 终端设置 ──────────────
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "terminal.integrated.copyOnSelection": true,
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.fontFamily": "Cascadia Code, Consolas, 'Courier New', monospace",
+    "terminal.integrated.fontSize": 14,
+    
+    // ────────────── 调试增强 ──────────────
+    "debug.allowBreakpointsEverywhere": true,
+    "debug.inlineValues": "on",
+    "debug.showBreakpointsInOverviewRuler": true,
+    
+    // ────────────── 扩展设置 ──────────────
+    "extensions.autoUpdate": true,
+    "extensions.autoCheckUpdates": true,
+    "extensions.ignoreRecommendations": false,
+    
+    // ────────────── 性能优化 ──────────────
+    "editor.minimap.enabled": true,
+    "editor.minimap.showSlider": "always",
+    "editor.codeLens": true,
+    "editor.lightbulb.enabled": "on",
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": "active",
+    
+    // ────────────── 代码格式化设置 ──────────────
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "editor.formatOnType": true,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": "explicit",
+        "source.fixAll": "explicit"
+    },
+    
+    // ────────────── Git 集成设置 ──────────────
+    "git.enableSmartCommit": true,
+    "git.confirmSync": false,
+    "git.autofetch": true,
+    "git.enableStatusBarSync": true,
+    "scm.diffDecorations": "all",
+    "scm.defaultViewMode": "tree",
+    
+    // ────────────── 语言特定设置 ──────────────
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit"
+        }
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
+}

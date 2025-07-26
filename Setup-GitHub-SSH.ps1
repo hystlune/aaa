@@ -62,7 +62,7 @@ if (-not (Test-Path $pubKeyPath)) {
     }
     
     Write-Host "正在生成SSH密钥..." -ForegroundColor Cyan
-    ssh-keygen -t ed25519 -C $email -f $keyPath -N '""'
+    ssh-keygen -t ed25519 -C $email -f $keyPath -N ""
     
     if (Test-Path $pubKeyPath) {
         Write-Host "✅ SSH密钥生成成功" -ForegroundColor Green
